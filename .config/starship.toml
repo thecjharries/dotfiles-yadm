@@ -1,0 +1,105 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$username\
+[@](bold bg:black fg:red)\
+$hostname\
+[](bg:black)\
+[](bg:blue fg:black)\
+$directory\
+[](fg:blue bg:green)\
+$git_branch\
+$git_state\
+$git_status\
+[](fg:green bg:bright-black)\
+$python\
+$golang\
+$rust\
+$terraform\
+[](fg:bright-black bg:none)
+$character
+"""
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+right_format = """
+[\\[](bg:black fg:blue)\
+$time
+[\\]](bg:black fg:blue)
+"""
+
+[username]
+disabled = false
+show_always = true
+format = "[$user]($style)"
+style_user = "bg:black fg:blue"
+style_root = "bold bg:black fg:blue"
+
+[hostname]
+disabled = false
+ssh_only = false
+ssh_symbol = "🌐"
+format = "[$hostname$ssh_symbol]($style)"
+style = "bg:black fg:green"
+
+[directory]
+disabled = false
+format = "[ $path$read_only]($style)"
+style = "bg:blue fg:black"
+truncation_length = 8
+truncation_symbol = ".../"
+truncate_to_repo = false
+
+[git_branch]
+symbol = ""
+format = "[ $symbol $branch(:$remote_branch) ]($style)"
+style = "fg:black bg:green"
+
+[git_state]
+format = "[$state( $progress_current/$progress_total)]($style) "
+style = "bold fg:black bg:green"
+
+[git_status]
+format = "([$all_status$ahead_behind ]($style))"
+style = "fg:black bg:green"
+ahead = "⬆"
+behind = "⬇"
+stashed = "S"
+modified = "✱"
+renamed = "➙"
+deleted = "✖"
+
+[python]
+disabled = false
+format = "[ $symbol($version)]($style)"
+style = "fg:white bg:bright-black"
+version_format = "${major}.${minor}"
+symbol = ""
+
+[golang]
+format = "[ $symbol($version)]($style)"
+style = "fg:white bg:bright-black"
+symbol = ""
+version_format = "${major}.${minor}"
+
+[rust]
+format = "[ $symbol($version)]($style)"
+style = "fg:white bg:bright-black"
+symbol = ""
+version_format = "${major}.${minor}"
+
+[terraform]
+format = "[ $symbol($version)]($style)"
+style = "fg:white bg:bright-black"
+symbol = "TF"
+version_format = "${major}.${minor}"
+
+[character]
+disabled = false
+
+[time]
+disabled = false
+format = "[$time]($style)"
+style = "bg:black fg:green"
