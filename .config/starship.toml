@@ -55,7 +55,7 @@ ssh_symbol = "🌐"
 style = "bg:black fg:green"
 
 [git_branch]
-format = "[ $symbol $branch(:$remote_branch) ]($style)"
+format = "[ $symbol $branch(:$remote_branch)]($style)"
 style = "fg:black bg:green"
 symbol = ""
 
@@ -64,14 +64,18 @@ format = "[$state( $progress_current/$progress_total)]($style) "
 style = "bold fg:black bg:green"
 
 [git_status]
-ahead = "⬆"
-behind = "⬇"
-deleted = "✖"
+ahead = " ⬆"
+behind = " ⬇"
+conflicted = " ="
+deleted = " ✖"
+diverged = " ⇕"
 format = "([$all_status$ahead_behind ]($style))"
-modified = "✱"
-renamed = "➙"
-stashed = "S"
+modified = " ✱"
+renamed = " ➙"
+staged = " +"
+stashed = " S"
 style = "fg:black bg:green"
+untracked = " ?"
 
 [python]
 disabled = false
