@@ -10,7 +10,7 @@
 [core]
 	autocrlf = input
 	editor = vim
-	excludesfile = /home/cjharries/.config/git/gitignore
+	excludesfile = /home/{{ yadm.user }}/git/gitignore
 	pager = less -F -S -R -i
 	whitespace = blank-at-eol,blank-at-eof,space-before-tab
 [fetch]
@@ -20,6 +20,8 @@
 	extendedRegexp = true
 [help]
 	autocorrect = 1
+[include]
+	path = /home/{{ yadm.user }}/.config/git/config.local
 [init]
 	defaultBranch = main
 [interactive]
@@ -31,6 +33,3 @@
 	followtags = true
 [status]
 	branch = true
-[user]
-	email = cj@wizardsoftheweb.pro
-	name = CJ Harries
