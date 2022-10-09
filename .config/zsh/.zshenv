@@ -21,5 +21,3 @@ export PAGER=less
 export MINIKUBE_HOME="${XDG_CONFIG_HOME}"
 
 export LESS="-g -i -M -R -S -w -z-4"
-
-export PATH
