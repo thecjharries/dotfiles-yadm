@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+# https://www.reddit.com/r/zsh/comments/gor76p/zsh_do_you_whish_to_see_all_possibilities_how_to/
+# which leads to
+# https://unix.stackexchange.com/questions/26789/pipe-zsh-auto-completion-list-to-file-or-less/30092#30092
+zstyle ':completion:*' list-prompt   ''
+zstyle ':completion:*' select-prompt ''
+
 # Copied from https://github.com/marlonrichert/zsh-autocomplete/blob/main/.zshrc
 # Changes have been made
 
