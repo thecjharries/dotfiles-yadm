@@ -61,13 +61,13 @@ zstyle ':autocomplete:*' add-space \
 # Autocomplete automatically selects a backend for its recent dirs completions.
 # So, normally you won't need to change this.
 # However, you can set it if you find that the wrong backend is being used.
-zstyle ':autocomplete:recent-dirs' backend cdr
+zstyle ':autocomplete:recent-dirs' backend zoxide
 # cdr:  Use Zsh's `cdr` function to show recent directories as completions.
 # no:   Don't show recent directories.
 # zsh-z|zoxide|z.lua|z.sh|autojump|fasd: Use this instead (if installed).
 # ⚠️ NOTE: This setting can NOT be changed at runtime.
 
-zstyle ':autocomplete:*' widget-style complete-word
+zstyle ':autocomplete:*' widget-style menu-select
 # complete-word: (Shift-)Tab inserts the top (bottom) completion.
 # menu-complete: Press again to cycle to next (previous) completion.
 # menu-select:   Same as `menu-complete`, but updates selection in menu.
