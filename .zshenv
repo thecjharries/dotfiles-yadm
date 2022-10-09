@@ -6,10 +6,13 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # Set up zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+export GOPATH=$( go env GOPATH )
+
 # Make all entries unique
 typeset -gU cdpath fpath mailpath path PATH
 
-path[1,0]=( "$HOME/.local/bin" )
+path=( "$GOPATH/bin" $path )
+path=( "$HOME/.local/bin" $path )
 
 # Allow Rust to manage its bootstrapping
 source "$HOME/.cargo/env"
