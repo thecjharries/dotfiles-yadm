@@ -7,3 +7,6 @@ alias kk='exa'
 alias exat='exa --tree --ignore-glob .git'
 alias lll='exat'
 alias kkk='exat'
+
+# AWS aliases
+alias whoamaws='aws sts get-caller-identity'
