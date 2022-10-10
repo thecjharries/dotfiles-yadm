@@ -1,20 +1,16 @@
-# Source aliases
+# Load things that are needed ASAP
+source "${ZDOTDIR}/plugins/zsh-defer/zsh-defer.plugin.zsh"
 source "${ZDOTDIR}/.aliasrc"
+source "${ZDOTDIR}/keybindings.zsh"
+# I don't have any lazyload commands right now
+# source "${ZDOTDIR}/plugins/zsh-lazyload/zsh-lazyload.zsh"
 
-# https://github.com/ellie/atuin
-eval "$(atuin init zsh)"
-
-# https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init zsh)"
-
-# https://direnv.net/
-eval "$(direnv hook zsh)"
-
-# https://starship.rs
+# Ensure the prompt is built
 eval "$(starship init zsh)"
 
-source "${ZDOTDIR}/completion.zsh"
-
-source "${ZDOTDIR}/keybindings.zsh"
-
-source "${ZDOTDIR}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+# Defer things that don't have to be run immediately
+zsh-defer source "${ZDOTDIR}/completion.zsh"
+zsh-defer source "${ZDOTDIR}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+zsh-defer eval "$(atuin init zsh)"
+zsh-defer eval "$(zoxide init zsh)"
+zsh-defer eval "$(direnv hook zsh)"
