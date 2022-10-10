@@ -16,3 +16,5 @@ eval "$(starship init zsh)"
 source "${ZDOTDIR}/completion.zsh"
 
 source "${ZDOTDIR}/keybindings.zsh"
+
+source "${ZDOTDIR}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
