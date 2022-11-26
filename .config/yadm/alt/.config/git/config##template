@@ -10,7 +10,7 @@
 [core]
 	autocrlf = input
 	editor = vim
-	excludesfile = /home/{{ yadm.user }}/git/gitignore
+	excludesfile = /home/{{ yadm.user }}/.config/git/gitignore
 	pager = less -F -S -R -i
 	whitespace = blank-at-eol,blank-at-eof,space-before-tab
 [fetch]
