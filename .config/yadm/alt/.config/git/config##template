@@ -21,7 +21,11 @@
 [help]
 	autocorrect = 1
 [include]
+{% if yadm.os == "Darwin" %}
+	path = /Users/{{ yadm.user }}/.config/git/config.local
+{% else %}
 	path = /home/{{ yadm.user }}/.config/git/config.local
+{% endif %}
 [init]
 	defaultBranch = main
 [interactive]
