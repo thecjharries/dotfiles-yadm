@@ -10,7 +10,11 @@
 [core]
 	autocrlf = input
 	editor = vim
+{% if yadm.os == "Darwin" %}
+    excludesfile = /Users/{{ yadm.user }}/.config/git/gitignore
+{% else %}
 	excludesfile = /home/{{ yadm.user }}/.config/git/gitignore
+{% endif %}
 	pager = less -F -S -R -i
 	whitespace = blank-at-eol,blank-at-eof,space-before-tab
 [fetch]
