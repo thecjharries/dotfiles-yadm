@@ -1,0 +1,12 @@
+[submodule ".config/zsh/plugins/zsh-autocomplete"]
+	path = .config/zsh/plugins/zsh-autocomplete
+	url = https://github.com/marlonrichert/zsh-autocomplete.git
+[submodule ".config/zsh/plugins/zsh-defer"]
+	path = .config/zsh/plugins/zsh-defer
+	url = https://github.com/romkatv/zsh-defer.git
+[submodule ".config/zsh/plugins/zsh-lazyload"]
+	path = .config/zsh/plugins/zsh-lazyload
+	url = https://github.com/qoomon/zsh-lazyload.git
+[submodule ".config/zsh/plugins/zsh-syntax-highlighting"]
+	path = .config/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
