@@ -3,6 +3,7 @@ container_id
 .idea
 .worktrees
 .envrc
+.vscode
 
 # Everything below is built by an amazing API!
 # Check out the links below.
