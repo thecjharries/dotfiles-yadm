@@ -1,12 +1,12 @@
 alias ls='ls --group-directories-first --color=auto'
 
 # Exa to replace standard ll setup
-alias exa='exa --all --long --header --group-directories-first --group --git --time-style long-iso --color always --color-scale'
-alias ll='exa'
-alias kk='exa'
-alias exat='exa --tree --ignore-glob .git'
-alias lll='exat'
-alias kkk='exat'
+alias eza='eza --all --long --header --group-directories-first --group --git --time-style long-iso --color always --color-scale'
+alias ll='eza'
+alias kk='eza'
+alias ezat='eza --tree --ignore-glob .git'
+alias lll='ezat'
+alias kkk='ezat'
 
 # AWS aliases
 alias whoamaws='aws sts get-caller-identity'

@@ -44,7 +44,7 @@ truncation_symbol = ".../"
 [golang]
 format = "[ $symbol($version)]($style)"
 style = "fg:white bg:bright-black"
-symbol = ""
+symbol = " "
 version_format = "${major}.${minor}"
 
 [hostname]
@@ -81,13 +81,13 @@ untracked = " ?"
 disabled = false
 format = "[ $symbol($version)]($style)"
 style = "fg:white bg:bright-black"
-symbol = ""
+symbol = " "
 version_format = "${major}.${minor}"
 
 [rust]
 format = "[ $symbol($version)]($style)"
 style = "fg:white bg:bright-black"
-symbol = ""
+symbol = " "
 version_format = "${major}.${minor}"
 
 [terraform]

@@ -4,6 +4,7 @@ container_id
 .worktrees
 .envrc
 .vscode
+.DS_Store
 
 # Everything below is built by an amazing API!
 # Check out the links below.
